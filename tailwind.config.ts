@@ -9,11 +9,22 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: "#0B2545",
-        teal: "#13A89E",
-        foam: "#F6F8F7",
-        sand: "#E9E4D8",
-        ink: "#0A1622",
+        // Brand palette
+        brand: {
+          blue: "#072199",       // wordmark deep blue
+          "blue-700": "#0A2AB8",
+          "blue-50": "#EEF0FC",
+          red: "#E32024",        // mark red
+          "red-700": "#B81A1E",
+          "red-50": "#FDECEC",
+        },
+        // Semantic aliases
+        navy: "#072199",
+        accent: "#E32024",
+        ink: "#0B1230",
+        paper: "#FFFFFF",
+        cream: "#F7F8FB",
+        line: "#E6E8EF",
       },
       fontFamily: {
         serif: ["Fraunces", "Georgia", "serif"],

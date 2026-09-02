@@ -11,7 +11,7 @@ export default function WorkPage() {
       <PageHeader
         eyebrow="Selected work"
         title="A small, mostly quiet body of work."
-        dek="Cases are gated only where the client asked. The rest are open."
+        dek="Illustrative engagements across our practice areas. Client identities are anonymised unless we have written permission to name them."
       />
       <section className="container-wide pb-24 grid md:grid-cols-2 gap-8">
         {cases.map((c) => (

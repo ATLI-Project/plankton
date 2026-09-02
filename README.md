@@ -4,7 +4,7 @@ Boutique advisory firm marketing site. Built with Next.js 14 (App Router), TypeS
 
 ## Requirements
 
-- Node.js 20.9+
+- Node.js 18.17+ (or 20+)
 - npm 9+
 
 ## Getting started

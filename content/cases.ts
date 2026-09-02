@@ -15,82 +15,83 @@ export type CaseStudy = {
 
 export const cases: CaseStudy[] = [
   {
-    slug: "series-b-saas-repositioning",
-    sector: "Software",
-    service: "Strategy & Growth",
+    slug: "financial-services-ma-due-diligence",
+    sector: "Financial services",
+    service: "M&A Advisory",
+    year: 2026,
+    duration: "10 weeks",
+    title: "Buy-side due diligence for a West African financial services acquisition",
+    result: "Repriced the transaction and secured a cleaner post-close integration path.",
+    situation:
+      "A regional financial group was evaluating the acquisition of a mid-sized institution across multiple markets. The seller's information memorandum overstated recurring earnings and understated integration risk. The acquirer needed an independent, decision-grade view before submitting a binding offer.",
+    actions: [
+      "Ran commercial, financial, and operational due diligence in parallel workstreams.",
+      "Rebuilt the target's quality-of-earnings analysis and normalised three years of results.",
+      "Mapped regulatory, credit, and technology integration risks with quantified mitigations.",
+      "Coached the deal team through negotiation of price adjustments and reps and warranties.",
+    ],
+    outcome: [
+      "Headline price adjusted downward in line with the quality-of-earnings findings.",
+      "Escrow and indemnity structure rebuilt to reflect identified risks.",
+      "Day-1 integration plan agreed with the seller before signing.",
+    ],
+    quote: {
+      text: "Their diligence changed the shape of the deal. We paid a fair price, not the asking one.",
+      attribution: "Managing Director, acquirer",
+    },
+    reflection:
+      "We should have flagged the technology separation cost earlier. It became the largest single line in the revised bid.",
+  },
+  {
+    slug: "esg-strategy-manufacturing",
+    sector: "Manufacturing",
+    service: "Sustainability & ESG",
+    year: 2025,
+    duration: "14 weeks",
+    title: "Building an ESG strategy and disclosure framework for a manufacturer",
+    result: "A board-approved ESG strategy, materiality assessment, and first sustainability report.",
+    situation:
+      "A large manufacturing group faced growing pressure from lenders, offtakers, and regulators to demonstrate credible environmental and social performance. Internal ESG work was fragmented across functions, and there was no single narrative the board could stand behind.",
+    actions: [
+      "Facilitated a double materiality assessment across twenty-two stakeholder groups.",
+      "Benchmarked disclosure practice against IFRS S1/S2, GRI, and sector-specific standards.",
+      "Set baseline metrics for Scope 1, 2, and material Scope 3 emissions.",
+      "Wrote the first sustainability report and the board's ESG policy suite.",
+    ],
+    outcome: [
+      "Board-approved ESG strategy aligned to group corporate strategy.",
+      "First externally assured sustainability report published within nine months.",
+      "Two development finance facilities re-priced on the strength of the new disclosures.",
+    ],
+    quote: {
+      text: "They translated ESG from a compliance exercise into a capital markets story.",
+      attribution: "Group CFO",
+    },
+    reflection:
+      "We would spend more time on data infrastructure at the outset. Reporting is only as credible as the systems underneath it.",
+  },
+  {
+    slug: "corporate-strategy-refresh",
+    sector: "Financial services",
+    service: "Corporate Strategy",
     year: 2025,
     duration: "12 weeks",
-    title: "Repositioning a Series B SaaS for enterprise",
-    result: "ARR grew from $9M to $31M in 14 months.",
+    title: "Strategy refresh for a financial institution entering a new growth cycle",
+    result: "A five-year plan, revised operating model, and reprioritised investment portfolio.",
     situation:
-      "Founder-led sales had stalled at $9M ARR. Mid-market customers churned within a year, and enterprise deals slipped a quarter every quarter. The board had begun to lose patience, and a planned Series C had been postponed.",
+      "A financial institution had grown quickly on the back of a small number of products and a narrow customer base. Growth had begun to plateau and the executive team wanted a defensible plan for the next five years without abandoning the businesses that had built the franchise.",
     actions: [
-      "Rebuilt the ideal customer profile from thirty-two customer interviews.",
-      "Repriced the platform tier and introduced a usage-based add-on.",
-      "Introduced a mutual close plan and rewrote the security questionnaire.",
-      "Coached the founder through the first three enterprise negotiations.",
+      "Ran a structured market and competitor analysis across three candidate growth vectors.",
+      "Rebuilt the customer segmentation from primary research and internal data.",
+      "Modelled the investment case for each growth option under three macro scenarios.",
+      "Rewrote the operating model and KPI set to align execution with the chosen plan.",
     ],
     outcome: [
-      "ARR moved from $9M to $31M in 14 months.",
-      "Net dollar retention rose from 104% to 128%.",
-      "Series C led by a tier-one growth fund at a 2.4x prior valuation.",
-    ],
-    quote: {
-      text: "They asked three questions in the first meeting that we had been avoiding for a year. That is what we paid for.",
-      attribution: "CEO, Series B fintech",
-    },
-    reflection:
-      "We should have started the pricing work two months earlier. The founder was ready before we were.",
-  },
-  {
-    slug: "european-pe-carveout",
-    sector: "Private capital",
-    service: "Operating Advisory",
-    year: 2024,
-    duration: "18 weeks",
-    title: "A carve-out playbook for a European PE portfolio",
-    result: "Time-to-value cut from 18 months to 7 across three carve-outs.",
-    situation:
-      "A five-company portfolio was carving out non-core divisions with no shared method. Each deal team was reinventing the transition service agreement, the Day-1 plan, and the KPI set. The fund's operating partner asked us to help.",
-    actions: [
-      "Built a repeatable playbook covering TSA scoping, Day-1 readiness, and value capture.",
-      "Coached three deal teams through their first full cycles.",
-      "Wrote a short internal handbook the operating partner still uses.",
-    ],
-    outcome: [
-      "Time-to-value cut from 18 months to 7 across three carve-outs.",
-      "IT separation cost variance reduced from 40% to under 10%.",
-      "The playbook is now the fund's operating standard.",
-    ],
-    quote: {
-      text: "Quiet, fast, and unusually well-prepared.",
-      attribution: "Managing Partner, European growth fund",
-    },
-    reflection:
-      "We were too polite on IT separation cost estimates in month one. Push harder next time.",
-  },
-  {
-    slug: "climate-tech-series-a",
-    sector: "Climate & energy",
-    service: "Capital & Transactions",
-    year: 2025,
-    duration: "9 weeks",
-    title: "Seed-to-Series-A narrative for a climate tech founder",
-    result: "Oversubscribed at target. Two term sheets within four weeks.",
-    situation:
-      "The company had strong science but a weak story. A first fundraise had stalled after fifteen investor meetings without a term sheet. The founder had six months of cash and had begun to doubt the plan.",
-    actions: [
-      "Reframed the market from 'carbon software' to 'grid-edge risk'.",
-      "Rebuilt the financial model with clearer unit economics.",
-      "Mapped forty-one target investors and prioritised twelve.",
-      "Ran three rehearsal sessions with the founding team.",
-    ],
-    outcome: [
-      "Oversubscribed at target size.",
-      "Two term sheets within four weeks of first meetings.",
-      "Lead investor is a specialist climate fund the founder had not previously met.",
+      "Board-approved five-year strategy with clear owners and stage gates.",
+      "Investment portfolio reprioritised, freeing capital for the two highest-return options.",
+      "Executive incentives realigned to the new KPI set within a quarter.",
     ],
     reflection:
-      "We should have been more disciplined about which meetings to decline. The middle of the process bled time.",
+      "We would have brought the risk function into the growth-option modelling sooner. Their input shaped the final plan more than we expected.",
   },
 ];

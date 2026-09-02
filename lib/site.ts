@@ -1,16 +1,21 @@
 export const site = {
   name: "Plankton Partners",
-  tagline: "Small partners. Systemic impact.",
+  shortName: "PPL",
+  tagline: "Advisory that compounds.",
   description:
-    "A small advisory firm helping founders, funds, and operators make the decisions that quietly determine whether a business compounds.",
+    "Plankton Partners is a management consulting and financial advisory firm. We advise clients on M&A, Sustainability and ESG, Strategy, Business Transformation, Financial Management, and Risk.",
   url: "https://planktonpartners.com",
   email: {
-    general: "hello@planktonpartners.com",
-    press: "press@planktonpartners.com",
-    careers: "careers@planktonpartners.com",
+    general: "connect@planktopartners.com",
+    press: "connect@planktopartners.com",
+    careers: "connect@planktopartners.com",
   },
-  phone: "+1 (000) 000-0000",
-  offices: ["London", "New York", "Singapore"],
+  phone: "+233 24 402 8258",
+  offices: ["Accra"],
+  address: {
+    postal: "P.O. Box CT 8511, Cantonments, Accra, Ghana",
+    digital: "GA-124-6890",
+  },
   social: {
     linkedin: "https://www.linkedin.com/",
     x: "https://x.com/",
@@ -21,8 +26,8 @@ export const site = {
 };
 
 export const nav = [
-  { href: "/services", label: "Work" },
-  { href: "/method", label: "Method" },
+  { href: "/services", label: "Services" },
+  { href: "/method", label: "Approach" },
   { href: "/sectors", label: "Sectors" },
   { href: "/insights", label: "Insights" },
   { href: "/about", label: "About" },

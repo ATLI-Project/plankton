@@ -1,99 +1,51 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import BrandMark from "./BrandMark";
 
 export default function Hero() {
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-
-    let raf = 0;
-    let width = 0;
-    let height = 0;
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    type P = { x: number; y: number; r: number; vx: number; vy: number; a: number };
-    let particles: P[] = [];
-
-    const resize = () => {
-      width = canvas.clientWidth;
-      height = canvas.clientHeight;
-      canvas.width = width * dpr;
-      canvas.height = height * dpr;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      const count = Math.min(90, Math.floor((width * height) / 18000));
-      particles = Array.from({ length: count }, () => ({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        r: 0.6 + Math.random() * 1.6,
-        vx: (Math.random() - 0.5) * 0.15,
-        vy: (Math.random() - 0.5) * 0.15,
-        a: 0.3 + Math.random() * 0.7,
-      }));
-    };
-
-    const draw = () => {
-      ctx.clearRect(0, 0, width, height);
-      for (const p of particles) {
-        p.x += p.vx;
-        p.y += p.vy;
-        if (p.x < 0 || p.x > width) p.vx *= -1;
-        if (p.y < 0 || p.y > height) p.vy *= -1;
-
-        const gradient = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.r * 6);
-        gradient.addColorStop(0, `rgba(19, 168, 158, ${p.a})`);
-        gradient.addColorStop(1, "rgba(19, 168, 158, 0)");
-        ctx.fillStyle = gradient;
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r * 6, 0, Math.PI * 2);
-        ctx.fill();
-
-        ctx.fillStyle = `rgba(246, 248, 247, ${Math.min(1, p.a + 0.2)})`;
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fill();
-      }
-      raf = requestAnimationFrame(draw);
-    };
-
-    resize();
-    window.addEventListener("resize", resize);
-    if (!reduce) raf = requestAnimationFrame(draw);
-    else draw();
-
-    return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener("resize", resize);
-    };
-  }, []);
-
   return (
-    <section className="relative overflow-hidden bg-navy text-foam">
-      <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" aria-hidden="true" />
+    <section className="relative overflow-hidden bg-white">
+      {/* Subtle background pattern in brand blue */}
       <div
-        className="absolute inset-0 opacity-70"
+        className="pointer-events-none absolute inset-0 opacity-[0.04]"
         style={{
-          background:
-            "radial-gradient(1200px 500px at 80% 20%, rgba(19,168,158,0.18), transparent 60%), radial-gradient(900px 400px at 20% 80%, rgba(19,168,158,0.08), transparent 60%)",
+          backgroundImage:
+            "radial-gradient(#072199 1px, transparent 1px)",
+          backgroundSize: "22px 22px",
         }}
         aria-hidden="true"
       />
-      <div className="relative container-wide py-32 md:py-44 min-h-[80vh] flex flex-col justify-center">
-        <div className="eyebrow text-teal">Advisory · Est. 2019</div>
-        <h1 className="mt-6 font-serif text-5xl md:text-7xl leading-[1.05] tracking-tightish max-w-4xl">
-          Small partners.<br />Systemic impact.
-        </h1>
-        <p className="mt-6 max-w-xl text-foam/80 text-lg">
-          We advise founders, investors, and operators on the decisions that quietly determine whether a business compounds or stalls.
-        </p>
-        <div className="mt-10 flex flex-wrap gap-3">
-          <Link href="/contact" className="btn-primary no-underline">Start a conversation</Link>
-          <Link href="/work" className="btn-outline-light no-underline">See selected work</Link>
+      {/* Corner accent */}
+      <div
+        className="pointer-events-none absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full opacity-[0.06]"
+        style={{ background: "radial-gradient(closest-side, #072199, transparent)" }}
+        aria-hidden="true"
+      />
+
+      <div className="relative container-wide py-24 md:py-32 grid md:grid-cols-12 gap-10 items-center">
+        <div className="md:col-span-8">
+          <div className="flex items-center gap-3">
+            <span className="h-[2px] w-8 bg-accent" />
+            <span className="eyebrow">Management Consulting · Financial Advisory</span>
+          </div>
+          <h1 className="mt-6 font-serif text-5xl md:text-7xl leading-[1.05] tracking-tightish text-navy max-w-4xl">
+            Reliable advice on the decisions that shape your business.
+          </h1>
+          <p className="mt-6 max-w-2xl text-lg text-ink/75 leading-relaxed">
+            Plankton Partners advises organisations across M&amp;A, Sustainability and ESG, Corporate Strategy, Business Transformation, Financial Management, and Risk — with data-driven insight and a senior team accountable end to end.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-3">
+            <Link href="/contact" className="btn-primary no-underline">Start a conversation</Link>
+            <Link href="/services" className="btn-ghost no-underline">Explore our services</Link>
+          </div>
+        </div>
+
+        <div className="md:col-span-4 flex md:justify-end">
+          <div className="relative">
+            <BrandMark size={220} className="drop-shadow-sm" />
+            <div className="absolute -bottom-3 -left-3 h-24 w-24 rounded-md border border-navy/20 -z-10" />
+          </div>
         </div>
       </div>
     </section>

@@ -1,18 +1,19 @@
 const stats = [
-  { k: "40+", v: "Engagements since 2019" },
-  { k: "11", v: "Countries" },
-  { k: "7", v: "Sectors" },
-  { k: "8", v: "Active clients, capped" },
+  { k: "6", v: "Practice areas" },
+  { k: "M&A", v: "Due diligence and transactions" },
+  { k: "ESG", v: "IFRS S1/S2 and GRI reporting" },
+  { k: "Accra", v: "Headquartered in Ghana" },
 ];
 
 export default function ProofStrip() {
   return (
-    <section className="bg-sand/60">
+    <section className="bg-navy text-white relative overflow-hidden">
+      <div className="absolute top-0 left-0 right-0 h-[3px] bg-accent" />
       <div className="container-wide py-16 grid grid-cols-2 md:grid-cols-4 gap-8">
         {stats.map((s) => (
           <div key={s.v}>
-            <div className="font-serif text-4xl md:text-5xl text-navy">{s.k}</div>
-            <div className="mt-2 text-sm text-navy/60">{s.v}</div>
+            <div className="font-serif text-4xl md:text-5xl text-white">{s.k}</div>
+            <div className="mt-2 text-sm text-white/70">{s.v}</div>
           </div>
         ))}
       </div>

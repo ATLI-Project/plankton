@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { nav, site } from "@/lib/site";
 
@@ -17,14 +18,22 @@ export default function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-colors ${
-        scrolled ? "bg-foam/85 backdrop-blur border-b border-navy/10" : "bg-transparent"
+      className={`sticky top-0 z-50 transition-colors bg-white ${
+        scrolled ? "border-b border-line shadow-sm" : "border-b border-transparent"
       }`}
     >
+      {/* Accent hairline in brand red */}
+      <div className="h-[3px] w-full bg-accent" />
       <div className="container-wide flex items-center justify-between py-4">
-        <Link href="/" className="flex items-center gap-2 no-underline" aria-label={site.name}>
-          <Mark />
-          <span className="font-serif text-lg text-navy tracking-tightish">{site.name}</span>
+        <Link href="/" className="flex items-center gap-3 no-underline" aria-label={site.name}>
+          <Image
+            src="/brand/plankton-partners-logo.png"
+            alt={site.name}
+            width={200}
+            height={60}
+            priority
+            className="h-8 md:h-10 w-auto"
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -32,7 +41,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm text-navy/80 hover:text-navy no-underline"
+              className="text-sm text-navy/80 hover:text-navy no-underline font-medium"
             >
               {item.label}
             </Link>
@@ -40,11 +49,11 @@ export default function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <Link href="/contact" className="btn-ghost no-underline">Contact</Link>
+          <Link href="/contact" className="btn-primary no-underline">Contact</Link>
         </div>
 
         <button
-          className="md:hidden inline-flex items-center justify-center rounded-full border border-navy/20 p-2"
+          className="md:hidden inline-flex items-center justify-center rounded-md border border-navy/25 p-2 text-navy"
           aria-label="Open menu"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -56,38 +65,24 @@ export default function Header() {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-navy/10 bg-foam">
+        <div className="md:hidden border-t border-line bg-white">
           <div className="container-wide py-4 flex flex-col gap-3">
             {nav.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="text-navy no-underline py-1"
+                className="text-navy no-underline py-1 font-medium"
               >
                 {item.label}
               </Link>
             ))}
-            <Link href="/contact" onClick={() => setOpen(false)} className="btn-ghost self-start no-underline">
+            <Link href="/contact" onClick={() => setOpen(false)} className="btn-primary self-start no-underline">
               Contact
             </Link>
           </div>
         </div>
       )}
     </header>
-  );
-}
-
-function Mark() {
-  return (
-    <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true">
-      <circle cx="14" cy="14" r="12" fill="#0B2545" />
-      <circle cx="14" cy="14" r="5" fill="none" stroke="#13A89E" strokeWidth="1.2" />
-      <circle cx="14" cy="14" r="9" fill="none" stroke="#13A89E" strokeWidth="0.6" opacity="0.6" />
-      <circle cx="14" cy="9" r="1" fill="#13A89E" />
-      <circle cx="19" cy="14" r="1" fill="#13A89E" />
-      <circle cx="14" cy="19" r="1" fill="#13A89E" />
-      <circle cx="9" cy="14" r="1" fill="#13A89E" />
-    </svg>
   );
 }

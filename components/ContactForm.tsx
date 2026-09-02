@@ -26,10 +26,10 @@ export default function ContactForm() {
 
   if (status === "sent") {
     return (
-      <div className="rounded-2xl border border-teal/40 bg-teal/5 p-8">
+      <div className="rounded-lg border-l-4 border-accent border border-line bg-white p-8">
         <h2 className="font-serif text-2xl text-navy">Thank you.</h2>
-        <p className="mt-3 text-navy/70">
-          A partner will read your note and get back to you within two business days.
+        <p className="mt-3 text-ink/70">
+          A member of the team will read your note and reply within two business days.
         </p>
       </div>
     );
@@ -41,13 +41,13 @@ export default function ContactForm() {
       <Field label="Company" name="company" />
       <Field label="Email" name="email" type="email" required />
       <div>
-        <label className="block text-sm text-navy/70 mb-1">What are you working on?</label>
+        <label className="block text-sm text-ink/70 mb-1 font-medium">What are you working on?</label>
         <textarea
           name="message"
           rows={6}
           maxLength={2000}
           required
-          className="w-full rounded-xl border border-navy/20 bg-white px-4 py-3 text-navy focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal/30"
+          className="w-full rounded-md border border-line bg-white px-4 py-3 text-ink focus:border-navy focus:outline-none focus:ring-2 focus:ring-navy/20"
         />
       </div>
       <Field label="How did you hear about us?" name="referral" />
@@ -60,10 +60,10 @@ export default function ContactForm() {
           {status === "sending" ? "Sending…" : "Send"}
         </button>
         {status === "error" && (
-          <span className="text-sm text-red-600">Something went wrong. Try again or email us directly.</span>
+          <span className="text-sm text-accent">Something went wrong. Try again or email us directly.</span>
         )}
       </div>
-      <p className="text-xs text-navy/50">
+      <p className="text-xs text-ink/50">
         We reply within two business days. Your note stays with the partners.
       </p>
     </form>
@@ -83,16 +83,16 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={name} className="block text-sm text-navy/70 mb-1">
+      <label htmlFor={name} className="block text-sm text-ink/70 mb-1 font-medium">
         {label}
-        {required && <span className="text-teal"> *</span>}
+        {required && <span className="text-accent"> *</span>}
       </label>
       <input
         id={name}
         name={name}
         type={type}
         required={required}
-        className="w-full rounded-xl border border-navy/20 bg-white px-4 py-3 text-navy focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal/30"
+        className="w-full rounded-md border border-line bg-white px-4 py-3 text-ink focus:border-navy focus:outline-none focus:ring-2 focus:ring-navy/20"
       />
     </div>
   );

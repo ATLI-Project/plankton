@@ -3,11 +3,11 @@ import CTA from "@/components/CTA";
 import { site } from "@/lib/site";
 
 const looking = [
-  "Ten or more years of direct advisory, operating, or investing experience",
+  "Direct experience in advisory, banking, or a relevant operating role",
   "A written work sample you are proud of",
   "The instinct to say “I do not know” out loud",
-  "The ability to run a client relationship without supervision",
-  "A view on something the industry gets wrong",
+  "The ability to run a client relationship without close supervision",
+  "A point of view on how the industry can be better",
 ];
 
 export default function CareersPage() {
@@ -15,8 +15,8 @@ export default function CareersPage() {
     <>
       <PageHeader
         eyebrow="Careers"
-        title="We hire rarely and slowly."
-        dek="Most partners join after working alongside us on a client engagement. If that path is not open to you, the door is still ajar."
+        title="Join a team of experienced professionals."
+        dek="We hire reputable and experienced professionals across our practice areas — M&A, Sustainability and ESG, Strategy, Transformation, Financial Management, and Risk."
       />
 
       <section className="container-wide pb-16 grid md:grid-cols-12 gap-10">
@@ -34,19 +34,16 @@ export default function CareersPage() {
         <div className="md:col-span-6">
           <h2 className="font-serif text-2xl text-navy">How to apply</h2>
           <p className="mt-6 text-navy/80 leading-relaxed">
-            Send a note to{" "}
-            <a
-              className="text-teal underline-offset-4"
-              href={`mailto:${site.email.careers}`}
-            >
+            Send a note and a short CV to{" "}
+            <a className="text-teal underline-offset-4" href={`mailto:${site.email.careers}`}>
               {site.email.careers}
             </a>
-            . Include a paragraph on the last time you changed your mind about something important. No CV needed in the first round.
+            . Include a paragraph on the last time you changed your mind about something important, and the practice area that interests you most.
           </p>
           <div className="mt-10 rounded-2xl border border-navy/10 bg-sand/40 p-6">
             <div className="eyebrow">Open roles</div>
             <p className="mt-3 text-navy/80">
-              We are not actively hiring, but we always read good notes.
+              We are currently reviewing candidates across our M&amp;A and ESG practices. We also welcome open applications from experienced professionals.
             </p>
           </div>
         </div>
