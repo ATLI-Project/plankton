@@ -1,36 +1,14 @@
 import Link from "next/link";
 
 const services = [
-  {
-    title: "Mergers & Acquisitions",
-    body: "Buy-side and sell-side due diligence, valuation, deal structuring, and post-merger integration for acquirers, sellers, and boards.",
-    href: "/services#ma",
-  },
-  {
-    title: "Sustainability & ESG",
-    body: "ESG strategy, IFRS S1/S2 and GRI disclosure, climate risk, and sustainable finance advisory for organisations meeting the new standard.",
-    href: "/services#esg",
-  },
-  {
-    title: "Corporate Strategy",
-    body: "Growth, market entry, and operating model work for management teams planning the next five years without breaking the last five.",
-    href: "/services#strategy",
-  },
-  {
-    title: "Business Transformation",
-    body: "Programme design, process re-engineering, and organisation performance improvement with the discipline to see change through.",
-    href: "/services#transformation",
-  },
-  {
-    title: "Financial Management",
-    body: "Financial advisory, investment research, capital raising support, and banking performance review grounded in sector expertise.",
-    href: "/services#financial",
-  },
-  {
-    title: "Risk Management",
-    body: "Enterprise risk frameworks, governance, and board reporting that change decisions rather than fill folders.",
-    href: "/services#risk",
-  },
+  { title: "Corporate Strategy", href: "/services#strategy", body: "Corporate and business-unit strategy, growth, and positioning." },
+  { title: "Environment, Social & Governance", href: "/services#esg", body: "ESG strategy, disclosure, climate planning, and governance." },
+  { title: "Business Transformation", href: "/services#transformation", body: "Programme design, process re-engineering, and operating model change." },
+  { title: "Organisation & Performance", href: "/services#organisation", body: "Organisation design, incentives, leadership, and capacity building." },
+  { title: "M&A Due Diligence", href: "/services#ma", body: "Buy-side and sell-side diligence and transaction support." },
+  { title: "Financial Management", href: "/services#financial", body: "Financial advisory, planning, reporting, and capital support." },
+  { title: "Risk Management", href: "/services#risk", body: "Enterprise risk frameworks, governance, and board reporting." },
+  { title: "Financial Sector Research", href: "/services#research", body: "Market, sector, and competitor intelligence for decisions." },
 ];
 
 export default function ServicesGrid() {
@@ -42,10 +20,10 @@ export default function ServicesGrid() {
           <span className="eyebrow">What we do</span>
         </div>
         <h2 className="mt-4 font-serif text-3xl md:text-5xl text-navy tracking-tightish max-w-3xl">
-          Six practices, built around the decisions that matter.
+          Our specialties.
         </h2>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         {services.map((s) => (
           <Link key={s.title} href={s.href} className="card no-underline group block">
             <div className="flex items-start justify-between">
@@ -54,7 +32,7 @@ export default function ServicesGrid() {
               </div>
               <span className="text-navy/40 group-hover:text-accent transition text-lg">→</span>
             </div>
-            <h3 className="mt-6 font-serif text-2xl text-navy">{s.title}</h3>
+            <h3 className="mt-6 font-serif text-xl text-navy">{s.title}</h3>
             <p className="mt-3 text-ink/70 text-sm leading-relaxed">{s.body}</p>
           </Link>
         ))}

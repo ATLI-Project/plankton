@@ -6,17 +6,14 @@ import BrandMark from "./BrandMark";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-white">
-      {/* Subtle background pattern in brand blue */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.04]"
         style={{
-          backgroundImage:
-            "radial-gradient(#072199 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(#072199 1px, transparent 1px)",
           backgroundSize: "22px 22px",
         }}
         aria-hidden="true"
       />
-      {/* Corner accent */}
       <div
         className="pointer-events-none absolute -top-40 -right-40 h-[420px] w-[420px] rounded-full opacity-[0.06]"
         style={{ background: "radial-gradient(closest-side, #072199, transparent)" }}
@@ -33,7 +30,7 @@ export default function Hero() {
             Reliable advice on the decisions that shape your business.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-ink/75 leading-relaxed">
-            Plankton Partners advises organisations across M&amp;A, Sustainability and ESG, Corporate Strategy, Business Transformation, Financial Management, and Risk — with data-driven insight and a senior team accountable end to end.
+            Plankton Partners provides advisory and capacity building services across strategy, sustainability, business transformation, financial management, and risk management — with data-driven insight to power growth, improve profitability, and positively impact society.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link href="/contact" className="btn-primary no-underline">Start a conversation</Link>

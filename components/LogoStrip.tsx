@@ -1,9 +1,9 @@
 const capabilities = [
-  "M&A Due Diligence",
-  "Sustainability & ESG",
   "Corporate Strategy",
+  "Environment, Social & Governance",
   "Business Transformation",
   "Organisation & Performance",
+  "M&A Due Diligence",
   "Financial Management",
   "Risk Management",
   "Financial Sector Research",

@@ -8,7 +8,7 @@ const sectors = [
   },
   {
     name: "Energy & extractives",
-    body: "Upstream, midstream, and downstream operators managing the twin agendas of production growth and energy transition.",
+    body: "Operators managing the twin agendas of production growth and energy transition.",
   },
   {
     name: "Manufacturing & industrials",
@@ -16,7 +16,7 @@ const sectors = [
   },
   {
     name: "Consumer & agribusiness",
-    body: "Regional and multinational brands scaling into new markets and formalising supply chains.",
+    body: "Brands scaling into new markets and formalising supply chains.",
   },
   {
     name: "Development finance & impact",
@@ -24,7 +24,7 @@ const sectors = [
   },
   {
     name: "Family and owner-managed businesses",
-    body: "Founding families and owner-operators formalising governance, professionalising management, and preparing for capital events.",
+    body: "Founding families and owner-operators formalising governance and preparing for capital events.",
   },
 ];
 
@@ -41,27 +41,30 @@ export default function SectorsPage() {
       <PageHeader
         eyebrow="Focus areas"
         title="Deep experience across multiple industries and sectors."
-        dek="We deploy proven methods to serve organisations of every size and persuasion — from multinationals to owner-managed businesses, family enterprises, and not-for-profit organisations."
+        dek="Our cogent experience across multiple industries and sectors is a key differentiator. We deploy proven methods to serve organisations of all sizes and persuasions."
       />
-      <section className="container-wide pb-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="container-wide py-16 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {sectors.map((s) => (
           <div key={s.name} className="card">
-            <div className="h-1 w-10 bg-teal rounded-full" />
+            <div className="h-1 w-10 bg-accent rounded-full" />
             <h3 className="mt-5 font-serif text-2xl text-navy tracking-tightish">{s.name}</h3>
-            <p className="mt-3 text-navy/70 text-sm leading-relaxed">{s.body}</p>
+            <p className="mt-3 text-ink/70 text-sm leading-relaxed">{s.body}</p>
           </div>
         ))}
       </section>
 
-      <section className="bg-sand/50">
+      <section className="bg-cream border-y border-line">
         <div className="container-wide py-16">
-          <div className="eyebrow">Who we work with</div>
-          <h2 className="mt-3 font-serif text-3xl md:text-4xl text-navy tracking-tightish max-w-3xl">
+          <div className="flex items-center gap-3">
+            <span className="h-[2px] w-8 bg-accent" />
+            <span className="eyebrow">Who we work with</span>
+          </div>
+          <h2 className="mt-4 font-serif text-3xl md:text-4xl text-navy tracking-tightish max-w-3xl">
             Organisations of all sizes and persuasions.
           </h2>
           <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6">
             {clientTypes.map((c) => (
-              <div key={c} className="border-t border-navy/15 pt-4 font-serif text-lg text-navy">
+              <div key={c} className="rule-accent font-serif text-lg text-navy">
                 {c}
               </div>
             ))}

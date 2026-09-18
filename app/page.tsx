@@ -25,10 +25,10 @@ export default function HomePage() {
           </div>
           <div className="space-y-5 text-lg text-ink/75 leading-relaxed">
             <p>
-              We are a firm of Management Consultants, Financial Advisors, and Financial Sector Specialists. We advise organisations of all sizes on the critical areas of Mergers &amp; Acquisitions, Sustainability and ESG, Corporate Strategy, Business Transformation, Financial Management, and Risk.
+              We are a firm of Management Consultants, Financial Advisors, and Financial Sector Specialists. We provide advisory and capacity building services to organisations of all sizes.
             </p>
             <p>
-              Our team of reputable and experienced professionals has a proven track record of helping clients grow sustainably — delivering fit-for-purpose solutions grounded in data-driven insight, and staying in the work until it compounds.
+              We have a team of reputable and experienced professionals with a proven track record of helping organisations grow sustainably — delivering reliable advice and data-driven insight across strategy, sustainability, business transformation, financial management, and risk management.
             </p>
           </div>
         </div>

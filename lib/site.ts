@@ -1,16 +1,16 @@
 export const site = {
   name: "Plankton Partners",
   shortName: "PPL",
-  tagline: "Advisory that compounds.",
+  tagline: "Advisory and capacity building.",
   description:
-    "Plankton Partners is a management consulting and financial advisory firm. We advise clients on M&A, Sustainability and ESG, Strategy, Business Transformation, Financial Management, and Risk.",
+    "Plankton Partners is a firm of Management Consultants, Financial Advisors, and Financial Sector Specialists. We provide advisory and capacity building services to organisations of all sizes.",
   url: "https://planktonpartners.com",
   email: {
     general: "connect@planktopartners.com",
     press: "connect@planktopartners.com",
     careers: "connect@planktopartners.com",
   },
-  phone: "+233 24 402 8258",
+  phone: "024 402 8258",
   offices: ["Accra"],
   address: {
     postal: "P.O. Box CT 8511, Cantonments, Accra, Ghana",
@@ -21,8 +21,6 @@ export const site = {
     x: "https://x.com/",
     rss: "/rss.xml",
   },
-  founded: 2019,
-  activeCap: 8,
 };
 
 export const nav = [

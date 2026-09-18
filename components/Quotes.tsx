@@ -1,20 +1,20 @@
 const quotes = [
   {
-    text: "Their due diligence changed the shape of the deal. We paid a fair price, not the asking one.",
-    who: "Managing Director, financial services acquirer",
+    text: "[Client quote. Replace with an approved, attributed quote from a recent engagement.]",
+    who: "[Name, Title, Organisation]",
   },
   {
-    text: "They translated ESG from a compliance exercise into a capital markets story.",
-    who: "Group CFO, manufacturing",
+    text: "[Client quote. Replace with an approved, attributed quote from a recent engagement.]",
+    who: "[Name, Title, Organisation]",
   },
 ];
 
 export default function Quotes() {
   return (
-    <section className="bg-cream">
+    <section className="bg-cream border-y border-line">
       <div className="container-wide py-20 grid md:grid-cols-2 gap-10">
-        {quotes.map((q) => (
-          <figure key={q.who} className="rule-accent">
+        {quotes.map((q, i) => (
+          <figure key={i} className="rule-accent">
             <blockquote className="font-serif text-2xl md:text-3xl text-navy leading-snug">
               “{q.text}”
             </blockquote>

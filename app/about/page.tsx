@@ -16,20 +16,20 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About Plankton Partners"
         title="A firm of management consultants and financial advisors."
-        dek="We provide advisory and capacity-building services to organisations of all sizes, with a team of reputable and experienced professionals who have a proven track record of helping clients grow sustainably."
+        dek="We provide advisory and capacity building services to organisations of all sizes, with a team of reputable and experienced professionals who have a proven track record of helping clients grow sustainably."
       />
 
       <section className="container-wide py-16 grid md:grid-cols-12 gap-10 items-start">
         <div className="md:col-span-6">
           <div className="eyebrow">Who we are</div>
           <p className="mt-4 text-lg text-ink/80 leading-relaxed">
-            Plankton Partners is a firm of Management Consultants, Financial Advisors, and Financial Sector Specialists. We advise clients on the critical areas of M&amp;A, Sustainability and ESG, Strategy, Business Transformation, Financial Management, and Risk — and we help them turn evidence into decisions their boards can defend.
+            Plankton Partners is a firm of Management Consultants, Financial Advisors, and Financial Sector Specialists. We provide reliable advice and support to help organisations navigate the critical areas of Strategy, Sustainability, Business Transformation, Financial Management, and Risk Management — delivering data-driven insight to power growth, improve profitability, and positively impact society.
           </p>
         </div>
         <div className="md:col-span-6">
           <div className="eyebrow">Why clients trust us</div>
           <p className="mt-4 text-lg text-ink/80 leading-relaxed">
-            We have a demonstrable track record of delivering value and exceeding client expectations. Our collective capabilities as a firm drive the services we offer, and clients are assured of fit-for-purpose solutions delivered by a senior team from first meeting to final handover.
+            We have a demonstrable track record of delivering value and exceeding client expectations. Clients are assured of receiving fit-for-purpose solutions and best-in-class support to overcome their business and organisational challenges.
           </p>
         </div>
       </section>
@@ -46,26 +46,26 @@ export default function AboutPage() {
       <section className="container-wide py-12">
         <div className="flex items-center gap-3">
           <span className="h-[2px] w-8 bg-accent" />
-          <span className="eyebrow">Our team lead</span>
+          <span className="eyebrow">Our team</span>
         </div>
         <h2 className="mt-4 font-serif text-3xl md:text-5xl text-navy tracking-tightish">
-          Led by seasoned practitioners.
+          Led by experienced professionals.
         </h2>
         <div className="mt-12 grid md:grid-cols-3 gap-10">
           {partners.map((p) => (
-            <article key={p.slug} className="md:col-span-2">
-              <div className="aspect-[16/9] rounded-lg relative overflow-hidden bg-navy border border-navy">
+            <article key={p.slug}>
+              <div className="aspect-[4/5] rounded-lg relative overflow-hidden bg-navy border border-navy">
                 <div
                   className="absolute inset-0 opacity-90"
                   style={{
                     backgroundImage:
-                      "radial-gradient(400px 240px at 60% 30%, rgba(255,255,255,0.08), transparent 60%), radial-gradient(300px 220px at 20% 80%, rgba(227,32,36,0.35), transparent 60%)",
+                      "radial-gradient(320px 220px at 60% 30%, rgba(255,255,255,0.08), transparent 60%), radial-gradient(300px 220px at 20% 80%, rgba(227,32,36,0.35), transparent 60%)",
                   }}
                 />
                 <div className="absolute top-4 left-4 h-1 w-10 bg-accent rounded-full" />
                 <div className="absolute bottom-4 left-4 right-4 text-white">
                   <div className="eyebrow text-white/80">{p.title}</div>
-                  <div className="font-serif text-3xl">{p.name}</div>
+                  <div className="font-serif text-2xl">{p.name}</div>
                 </div>
               </div>
               <div className="mt-5 text-sm text-ink/60">{p.focus}</div>
@@ -82,25 +82,26 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="bg-cream mt-16 border-t border-line">
+      <section className="bg-cream border-t border-line mt-16">
         <div className="container-wide py-16 grid md:grid-cols-3 gap-10">
           <div>
             <div className="eyebrow">Firm profile</div>
             <ul className="mt-4 space-y-2 text-ink/80 text-sm">
               <li>Management consulting and financial advisory</li>
               <li>Headquartered in {site.offices[0]}, Ghana</li>
-              <li>Advising clients across West Africa and beyond</li>
+              <li>Serving organisations of all sizes and persuasions</li>
             </ul>
           </div>
           <div>
             <div className="eyebrow">What we do best</div>
             <ul className="mt-4 space-y-2 text-ink/80 text-sm">
-              <li>Mergers &amp; Acquisitions and Due Diligence</li>
-              <li>Sustainability and ESG advisory</li>
               <li>Corporate Strategy</li>
+              <li>Environment, Social &amp; Governance (ESG)</li>
               <li>Business Transformation</li>
               <li>Organisation &amp; Performance</li>
-              <li>Financial Management and Risk</li>
+              <li>M&amp;A Due Diligence</li>
+              <li>Financial Management</li>
+              <li>Risk Management</li>
               <li>Financial Sector Research</li>
             </ul>
           </div>

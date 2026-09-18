@@ -104,10 +104,12 @@ export default function CasePage({ params }: { params: { slug: string } }) {
                 <figcaption className="mt-3 text-sm text-ink/60">— {c.quote.attribution}</figcaption>
               </figure>
             )}
-            <section>
-              <h2 className="font-serif text-2xl text-navy">What we would do differently</h2>
-              <p className="mt-4 text-ink/80 leading-relaxed">{c.reflection}</p>
-            </section>
+            {c.reflection && (
+              <section>
+                <h2 className="font-serif text-2xl text-navy">What we would do differently</h2>
+                <p className="mt-4 text-ink/80 leading-relaxed">{c.reflection}</p>
+              </section>
+            )}
           </div>
         </div>
       </article>
