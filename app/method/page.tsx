@@ -29,9 +29,9 @@ const principles = [
 ];
 
 const steps = [
-  { label: "Listen", when: "week 0", body: "A structured first conversation to understand the decision on the table." },
+  { label: "Listen", when: "PRE-ENGAGEMENT", body: "A structured first conversation to understand the decision on the table." },
   { label: "Frame", when: "weeks 1–2", body: "We agree on the decisions that matter and the evidence needed to make them." },
-  { label: "Work", when: "weeks 2–N", body: "Weekly working sessions, written interim views, and a small senior team accountable end to end." },
+  { label: "Work", when: "WEEKS 2–4", body: "Weekly working sessions, written interim views, and a small senior team accountable end to end." },
   { label: "Hand over", when: "final week", body: "Owners, dates, and a short written record. We remain reachable after close." },
 ];
 
