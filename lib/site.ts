@@ -6,9 +6,9 @@ export const site = {
     "Plankton Partners is a firm of Management Consultants, Financial Advisors, and Financial Sector Specialists. We provide advisory and capacity building services to organisations of all sizes.",
   url: "https://planktonpartners.com",
   email: {
-    general: "connect@planktopartners.com",
-    press: "connect@planktopartners.com",
-    careers: "connect@planktopartners.com",
+    general: "connect@planktonpartners.com",
+    press: "connect@planktonpartners.com",
+    careers: "connect@planktonpartners.com",
   },
   phone: "024 402 8258",
   offices: ["Accra"],
