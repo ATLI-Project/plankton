@@ -50,13 +50,4 @@ export const team: TeamMember[] = [
       "BA, Economics, University of Ghana",
     ],
   },
-  {
-    slug: "team-member",
-    name: "[Team member name]",
-    title: "[Title]",
-    bio: "[Profile: two or three sentences on experience, sectors and the work this person leads.]",
-    career: [{ org: "[Career: previous roles and organisations]", role: "" }],
-    education: ["[Education and professional qualifications]"],
-    placeholder: true,
-  },
 ];

@@ -42,7 +42,7 @@ export default function ServicesGrid() {
           <span className="eyebrow">What we do</span>
         </div>
         <h2 className="mt-4 font-serif text-3xl md:text-5xl text-navy tracking-tightish max-w-3xl">
-          Finance and strategy, from one seasoned professionals
+          Finance and strategy, from seasoned professionals
         </h2>
         <p className="mt-5 max-w-3xl text-lg text-ink/75 leading-relaxed">
           We work in two disciplines, and many clients use both: financial advisory to raise capital and complete transactions, and management consulting to build the organisation that delivers them. The work is organised in six practices.
