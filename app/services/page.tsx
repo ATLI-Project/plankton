@@ -1,95 +1,133 @@
 import PageHeader from "@/components/PageHeader";
 import CTA from "@/components/CTA";
 
-// Service descriptions draw only on the specialties named in the firm
-// profile. They describe what the firm offers, not specific assignments.
 const practices = [
   {
-    id: "strategy",
+    id: "financial-advisory",
+    number: "01",
+    title: "Financial Advisory",
+    when: "You need to raise capital, finance a project, buy or sell a business, restructure the balance sheet or test a major financial decision.",
+    groups: [
+      {
+        heading: "Corporate finance",
+        items: [
+          "Debt and equity capital raising, including private placements",
+          "Financial modelling, business planning and capital structure advice",
+          "Balance sheet restructuring and recapitalisation",
+          "Structured, trade and receivables finance",
+        ],
+      },
+      {
+        heading: "Mergers & acquisitions",
+        items: [
+          "Buy-side and sell-side advisory",
+          "Due diligence, managed as one integrated workstream",
+          "Target screening, deal structuring and negotiation support",
+          "Regulatory approvals and post-deal integration",
+        ],
+      },
+      {
+        heading: "Infrastructure & project finance",
+        items: [
+          "Project structuring, financial modelling and bankability reviews",
+          "Public-private partnerships and transaction advisory for government and state-owned enterprises",
+          "Engagement with commercial lenders, DFIs and export credit agencies",
+          "Energy, power, transport and social infrastructure",
+        ],
+      },
+      {
+        heading: "Valuation & investment advisory",
+        items: [
+          "Independent business, asset and share valuations for boards, shareholders and other stakeholders",
+          "Investment research and portfolio review",
+        ],
+      },
+    ],
+  },
+  {
+    id: "corporate-strategy",
+    number: "02",
     title: "Corporate Strategy",
-    fit: "You are setting the direction for the next phase of the business and need a plan the board can stand behind.",
-    do: [
-      "Corporate and business-unit strategy development",
-      "Growth, market entry, and positioning",
-      "Strategic planning and board facilitation",
-      "Performance frameworks and KPI design",
+    when: "You are setting direction for the next phase and need a plan the board will back.",
+    groups: [
+      {
+        heading: "",
+        items: [
+          "Corporate and business-unit strategy",
+          "Growth and market entry",
+          "Market and sector studies, and peer benchmarking",
+          "Board strategy sessions",
+          "Performance targets and KPIs",
+        ],
+      },
     ],
   },
   {
     id: "esg",
+    number: "03",
     title: "Environment, Social & Governance",
-    fit: "You need a credible ESG strategy, disclosure framework, or transition plan that meets lender, regulator, and board expectations.",
-    do: [
-      "ESG strategy design and materiality assessment",
-      "Sustainability reporting aligned to international standards",
-      "Climate and transition planning",
-      "ESG governance, policy, and board readiness",
+    when: "Lenders, investors or regulators expect a credible ESG position and you need to build one.",
+    groups: [
+      {
+        heading: "",
+        items: [
+          "Materiality assessment and ESG strategy",
+          "Sustainability reporting to IFRS S1/S2 and GRI",
+          "Environmental and social management systems",
+          "Board ESG oversight and training",
+        ],
+      },
     ],
   },
   {
-    id: "transformation",
+    id: "business-transformation",
+    number: "04",
     title: "Business Transformation",
-    fit: "A part of the business — or the whole business — needs to run differently, and the change programme needs discipline.",
-    do: [
-      "Transformation programme design and oversight",
-      "Business process re-engineering",
-      "Operating model redesign",
-      "Change management and capability building",
+    when: "The business needs to run differently, and the change needs discipline to deliver.",
+    groups: [
+      {
+        heading: "",
+        items: [
+          "Transformation and turnaround programmes",
+          "Business process re-engineering",
+          "Operating model redesign",
+          "Programme management and reporting",
+        ],
+      },
     ],
   },
   {
-    id: "organisation",
+    id: "organisation-performance",
+    number: "05",
     title: "Organisation & Performance",
-    fit: "The structure, incentives, or capabilities of the organisation are not keeping pace with the strategy.",
-    do: [
-      "Organisation design and structure",
-      "Performance management and incentives",
-      "Talent, leadership, and succession advisory",
-      "Capacity building and skills transfer",
+    when: "Your structure, people or governance are not keeping pace with the strategy.",
+    groups: [
+      {
+        heading: "",
+        items: [
+          "Organisation design",
+          "Performance management and incentives",
+          "Board and governance effectiveness",
+          "Training and capacity building",
+        ],
+      },
     ],
   },
   {
-    id: "ma",
-    title: "M&A Due Diligence",
-    fit: "You are preparing to acquire, divest, or merge, and need an independent, decision-grade view before you commit.",
-    do: [
-      "Buy-side and sell-side due diligence",
-      "Financial, commercial, and operational review",
-      "Quality-of-earnings analysis",
-      "Transaction support and negotiation advisory",
-    ],
-  },
-  {
-    id: "financial",
-    title: "Financial Management",
-    fit: "The finance function needs to keep pace with the business, or a specific financial decision needs an independent view.",
-    do: [
-      "Financial planning, analysis, and reporting",
-      "Financial advisory services and investment research",
-      "Capital raising support and lender engagement",
-      "Asset management and portfolio review",
-    ],
-  },
-  {
-    id: "risk",
+    id: "risk-management",
+    number: "06",
     title: "Risk Management",
-    fit: "The risk function needs to change decisions, not just file reports — and the board needs to see the risks that actually matter.",
-    do: [
-      "Enterprise risk management framework design",
-      "Credit, market, and operational risk review",
-      "Governance, policy, and board risk reporting",
-      "Risk-adjusted decision support",
-    ],
-  },
-  {
-    id: "research",
-    title: "Financial Sector Research",
-    fit: "You need an independent, well-evidenced view of a market, sector, or competitor set before you make a decision.",
-    do: [
-      "Market and sector analysis",
-      "Banking performance review",
-      "Competitor and peer benchmarking",
-      "Sector intelligence for strategy and transactions",
+    when: "Your board needs to see the risks that matter and act on them.",
+    groups: [
+      {
+        heading: "",
+        items: [
+          "Enterprise risk management frameworks",
+          "Credit, market, liquidity and operational risk",
+          "Risk appetite and board risk reporting",
+          "Regulatory compliance reviews",
+        ],
+      },
     ],
   },
 ];
@@ -98,42 +136,64 @@ export default function ServicesPage() {
   return (
     <>
       <PageHeader
-        eyebrow="What we do"
-        title="Our specialties."
-        dek="At Plankton Partners, our collective capabilities as a firm drive the services we offer. We provide reliable advice and support to help organisations navigate the critical areas of strategy, sustainability, business transformation, financial management, and risk."
+        eyebrow="Services"
+        title="Our services"
+        dek="Financial advisory sits at the centre of our work, supported by five management consulting practices. Most mandates draw on more than one."
       />
-      <section className="container-wide py-16 space-y-14">
-        {practices.map((p, i) => (
-          <div key={p.id} id={p.id} className="grid md:grid-cols-12 gap-10 scroll-mt-28 border-b border-line pb-14 last:border-0 last:pb-0">
-            <div className="md:col-span-4">
-              <div className="text-accent font-serif text-5xl">
-                {String(i + 1).padStart(2, "0")}
+      <section className="container-wide py-16 space-y-16">
+        {practices.map((p) => (
+          <div key={p.id} id={p.id} className="scroll-mt-28 border-b border-line pb-16 last:border-0 last:pb-0">
+            <div className="grid md:grid-cols-12 gap-10">
+              <div className="md:col-span-4">
+                <div className="text-accent font-serif text-5xl">{p.number}</div>
+                <h2 className="mt-4 font-serif text-3xl text-navy tracking-tightish">{p.title}</h2>
+                <p className="mt-4 text-sm text-ink/70 leading-relaxed">
+                  <span className="text-navy font-medium">When to call us.</span> {p.when}
+                </p>
               </div>
-              <h2 className="mt-4 font-serif text-3xl text-navy tracking-tightish">{p.title}</h2>
-              <p className="mt-4 text-sm text-ink/70 leading-relaxed">
-                <span className="text-navy font-medium">When it fits.</span> {p.fit}
-              </p>
-            </div>
-            <div className="md:col-span-8">
-              <div className="card">
-                <div className="eyebrow">What we do</div>
-                <ul className="mt-4 space-y-2 text-sm text-ink/80">
-                  {p.do.map((x) => (
-                    <li key={x} className="flex gap-2">
-                      <span className="text-accent">—</span>
-                      <span>{x}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className="md:col-span-8">
+                {p.groups.length === 1 && !p.groups[0].heading ? (
+                  <div className="card">
+                    <ul className="space-y-2 text-sm text-ink/80">
+                      {p.groups[0].items.map((x) => (
+                        <li key={x} className="flex gap-2">
+                          <span className="text-accent">—</span>
+                          <span>{x}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : (
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {p.groups.map((g) => (
+                      <div key={g.heading} className="card">
+                        <div className="eyebrow">{g.heading}</div>
+                        <ul className="mt-4 space-y-2 text-sm text-ink/80">
+                          {g.items.map((x) => (
+                            <li key={x} className="flex gap-2">
+                              <span className="text-accent">—</span>
+                              <span>{x}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>
         ))}
       </section>
-      <CTA
-        title="Not sure which practice fits? Send a note. We reply within two business days."
-        cta="Send a note"
-      />
+
+      <section className="bg-cream border-y border-line">
+        <div className="container-wide py-16 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <p className="font-serif text-2xl md:text-3xl text-navy max-w-2xl">
+            Not sure which service fits? Send us a note.
+          </p>
+          <a href="/contact" className="btn-primary self-start no-underline">Contact us</a>
+        </div>
+      </section>
     </>
   );
 }

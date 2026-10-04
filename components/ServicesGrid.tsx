@@ -1,14 +1,36 @@
 import Link from "next/link";
 
 const services = [
-  { title: "Corporate Strategy", href: "/services#strategy", body: "Corporate and business-unit strategy, growth, and positioning." },
-  { title: "Environment, Social & Governance", href: "/services#esg", body: "ESG strategy, disclosure, climate planning, and governance." },
-  { title: "Business Transformation", href: "/services#transformation", body: "Programme design, process re-engineering, and operating model change." },
-  { title: "Organisation & Performance", href: "/services#organisation", body: "Organisation design, incentives, leadership, and capacity building." },
-  { title: "M&A Due Diligence", href: "/services#ma", body: "Buy-side and sell-side diligence and transaction support." },
-  { title: "Financial Management", href: "/services#financial", body: "Financial advisory, planning, reporting, and capital support." },
-  { title: "Risk Management", href: "/services#risk", body: "Enterprise risk frameworks, governance, and board reporting." },
-  { title: "Financial Sector Research", href: "/services#research", body: "Market, sector, and competitor intelligence for decisions." },
+  {
+    title: "Financial Advisory",
+    href: "/services#financial-advisory",
+    body: "Corporate finance, M&A, infrastructure and project finance, and valuation, from the first financial model to financial close.",
+  },
+  {
+    title: "Corporate Strategy",
+    href: "/services#corporate-strategy",
+    body: "Strategy, growth plans and market entry the board can stand behind.",
+  },
+  {
+    title: "Environment, Social & Governance",
+    href: "/services#esg",
+    body: "ESG strategy, reporting and governance that lenders and regulators accept.",
+  },
+  {
+    title: "Business Transformation",
+    href: "/services#business-transformation",
+    body: "Operating model change, process redesign and turnaround.",
+  },
+  {
+    title: "Organisation & Performance",
+    href: "/services#organisation-performance",
+    body: "Structure, incentives, governance and capacity building.",
+  },
+  {
+    title: "Risk Management",
+    href: "/services#risk-management",
+    body: "Risk frameworks and board reporting that change decisions.",
+  },
 ];
 
 export default function ServicesGrid() {
@@ -20,10 +42,13 @@ export default function ServicesGrid() {
           <span className="eyebrow">What we do</span>
         </div>
         <h2 className="mt-4 font-serif text-3xl md:text-5xl text-navy tracking-tightish max-w-3xl">
-          Our specialties.
+          Finance and strategy, from one seasoned professionals
         </h2>
+        <p className="mt-5 max-w-3xl text-lg text-ink/75 leading-relaxed">
+          We work in two disciplines, and many clients use both: financial advisory to raise capital and complete transactions, and management consulting to build the organisation that delivers them. The work is organised in six practices.
+        </p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {services.map((s) => (
           <Link key={s.title} href={s.href} className="card no-underline group block">
             <div className="flex items-start justify-between">

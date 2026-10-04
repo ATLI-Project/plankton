@@ -22,7 +22,6 @@ export default function Header() {
         scrolled ? "border-b border-line shadow-sm" : "border-b border-transparent"
       }`}
     >
-      {/* Accent hairline in brand red */}
       <div className="h-[3px] w-full bg-accent" />
       <div className="container-wide flex items-center justify-between py-4">
         <Link href="/" className="flex items-center gap-3 no-underline" aria-label={site.name}>
@@ -36,7 +35,7 @@ export default function Header() {
           />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-7">
           {nav.map((item) => (
             <Link
               key={item.href}

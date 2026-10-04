@@ -1,20 +1,42 @@
 import PageHeader from "@/components/PageHeader";
 
-export const metadata = { title: "Privacy" };
+export const metadata = { title: "Privacy notice" };
 
 export default function Privacy() {
   return (
     <>
-      <PageHeader eyebrow="Legal" title="Privacy notice" dek="How we handle the small amount of data we hold." />
-      <section className="container-prose pb-24 text-navy/80 space-y-6 leading-relaxed">
-        <p>
-          Plankton Partners is a data controller for the information you share with us through this website and during engagements. We collect the minimum needed to reply to your inquiry, deliver the work you have hired us to do, and comply with our legal obligations.
+      <PageHeader
+        eyebrow="Legal"
+        title="Privacy notice"
+        dek="How we handle the information you share with us."
+      />
+      <section className="container-prose pb-24 text-ink/80">
+        <p className="leading-relaxed">
+          Plankton Partners is the data controller for personal information you share with us through this website or during an engagement. We process it in line with Ghana's Data Protection Act, 2012 (Act 843).
         </p>
-        <p>
-          We do not sell data. We do not run third-party ad trackers. Analytics, when used, is a cookieless, privacy-respecting product (Plausible or Fathom).
+
+        <h2 className="mt-10 font-serif text-2xl text-navy">What we collect and why</h2>
+        <p className="mt-4 leading-relaxed">
+          We collect only what we need: your name, contact details and message when you get in touch, your email address if you subscribe to our newsletter, and the information needed to deliver and invoice work you engage us to do.
         </p>
-        <p>
-          Contact form submissions are retained for up to twenty-four months unless the contact becomes a client. Engagement records are retained for six years after the last invoice, in line with UK statutory requirements. You can request access, correction, or deletion at any time by writing to hello@planktonpartners.com.
+
+        <h2 className="mt-10 font-serif text-2xl text-navy">How we protect it</h2>
+        <p className="mt-4 leading-relaxed">
+          We do not sell or share your data for marketing. We do not use advertising trackers. Client information is treated as strictly confidential and shared only with team members and associates working on your mandate, under confidentiality obligations.
+        </p>
+
+        <h2 className="mt-10 font-serif text-2xl text-navy">How long we keep it</h2>
+        <p className="mt-4 leading-relaxed">
+          Enquiries are kept for up to two years unless you become a client. Engagement records are kept for as long as Ghanaian legal, tax and regulatory requirements demand.
+        </p>
+
+        <h2 className="mt-10 font-serif text-2xl text-navy">Your rights</h2>
+        <p className="mt-4 leading-relaxed">
+          You may ask to see, correct or delete your personal information, or unsubscribe at any time, by writing to{" "}
+          <a className="text-navy hover:text-accent font-medium" href="mailto:connect@planktonpartners.com">
+            connect@planktonpartners.com
+          </a>
+          . You may also contact Ghana's Data Protection Commission.
         </p>
       </section>
     </>

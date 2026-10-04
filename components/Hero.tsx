@@ -24,13 +24,15 @@ export default function Hero() {
         <div className="md:col-span-8">
           <div className="flex items-center gap-3">
             <span className="h-[2px] w-8 bg-accent" />
-            <span className="eyebrow">Management Consulting · Financial Advisory</span>
+            <span className="eyebrow">
+              Financial Advisory · Management Consulting · Restructuring &amp; Strategy
+            </span>
           </div>
           <h1 className="mt-6 font-serif text-5xl md:text-7xl leading-[1.05] tracking-tightish text-navy max-w-4xl">
-            Reliable advice on the decisions that shape your business.
+            We help clients raise capital, close transactions and build stronger organisations.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-ink/75 leading-relaxed">
-            Plankton Partners provides advisory and capacity building services across strategy, sustainability, business transformation, financial management, and risk management — with data-driven insight to power growth, improve profitability, and positively impact society.
+            Plankton Partners is an independent financial advisory and management consulting firm based in Accra, advising governments, state-owned enterprises, companies, financial institutions and investors in Ghana and across Africa.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link href="/contact" className="btn-primary no-underline">Start a conversation</Link>

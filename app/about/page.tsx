@@ -1,123 +1,82 @@
 import PageHeader from "@/components/PageHeader";
 import CTA from "@/components/CTA";
-import { partners } from "@/content/partners";
-import { site } from "@/lib/site";
-
-const values = [
-  { t: "Reliable advice", b: "We provide clients with fit-for-purpose solutions and best-in-class support." },
-  { t: "Data-driven insight", b: "Every recommendation is grounded in evidence, not opinion." },
-  { t: "Confidentiality first", b: "We name a client only with written permission." },
-  { t: "Sustainable growth", b: "We help organisations grow in ways that endure beyond any single engagement." },
-];
 
 export default function AboutPage() {
   return (
     <>
       <PageHeader
-        eyebrow="About Plankton Partners"
-        title="A firm of management consultants and financial advisors."
-        dek="We provide advisory and capacity building services to organisations of all sizes, with a team of reputable and experienced professionals who have a proven track record of helping clients grow sustainably."
+        eyebrow="About"
+        title="About Plankton Partners"
+        dek="Plankton Partners is an independent firm of financial advisors and management consultants, headquartered in Accra and serving public and private sector clients across Ghana and the region."
       />
 
-      <section className="container-wide py-16 grid md:grid-cols-12 gap-10 items-start">
-        <div className="md:col-span-6">
-          <div className="eyebrow">Who we are</div>
-          <p className="mt-4 text-lg text-ink/80 leading-relaxed">
-            Plankton Partners is a firm of Management Consultants, Financial Advisors, and Financial Sector Specialists. We provide reliable advice and support to help organisations navigate the critical areas of Strategy, Sustainability, Business Transformation, Financial Management, and Risk Management — delivering data-driven insight to power growth, improve profitability, and positively impact society.
-          </p>
-        </div>
-        <div className="md:col-span-6">
-          <div className="eyebrow">Why clients trust us</div>
-          <p className="mt-4 text-lg text-ink/80 leading-relaxed">
-            We have a demonstrable track record of delivering value and exceeding client expectations. Clients are assured of receiving fit-for-purpose solutions and best-in-class support to overcome their business and organisational challenges.
-          </p>
-        </div>
-      </section>
-
-      <section className="container-wide pb-16 grid md:grid-cols-4 gap-6">
-        {values.map((v) => (
-          <div key={v.t} className="rule-accent">
-            <h3 className="font-serif text-lg text-navy">{v.t}</h3>
-            <p className="mt-2 text-sm text-ink/70 leading-relaxed">{v.b}</p>
+      <section className="container-wide py-16">
+        <div className="grid md:grid-cols-12 gap-10">
+          <div className="md:col-span-4">
+            <div className="eyebrow">Who we are</div>
           </div>
-        ))}
+          <div className="md:col-span-8">
+            <p className="text-lg text-ink/80 leading-relaxed">
+              Our team has worked inside banks, securities firms and international advisory firms. We know how the numbers are built, how lenders and regulators think and how boards decide. Because we are independent, our advice follows the evidence, and many clients use us for both the financing or transaction and the organisation that has to deliver it.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a href="/services" className="btn-primary no-underline">Our services</a>
+              <a href="/how-we-work" className="btn-ghost no-underline">How we work</a>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section className="container-wide py-12">
-        <div className="flex items-center gap-3">
-          <span className="h-[2px] w-8 bg-accent" />
-          <span className="eyebrow">Our team</span>
-        </div>
-        <h2 className="mt-4 font-serif text-3xl md:text-5xl text-navy tracking-tightish">
-          Led by experienced professionals.
-        </h2>
-        <div className="mt-12 grid md:grid-cols-3 gap-10">
-          {partners.map((p) => (
-            <article key={p.slug}>
-              <div className="aspect-[4/5] rounded-lg relative overflow-hidden bg-navy border border-navy">
-                <div
-                  className="absolute inset-0 opacity-90"
-                  style={{
-                    backgroundImage:
-                      "radial-gradient(320px 220px at 60% 30%, rgba(255,255,255,0.08), transparent 60%), radial-gradient(300px 220px at 20% 80%, rgba(227,32,36,0.35), transparent 60%)",
-                  }}
-                />
-                <div className="absolute top-4 left-4 h-1 w-10 bg-accent rounded-full" />
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <div className="eyebrow text-white/80">{p.title}</div>
-                  <div className="font-serif text-2xl">{p.name}</div>
-                </div>
+      <section className="bg-cream border-y border-line">
+        <div className="container-wide py-16">
+          <div className="grid md:grid-cols-12 gap-10">
+            <div className="md:col-span-4">
+              <div className="eyebrow">Our team</div>
+            </div>
+            <div className="md:col-span-8">
+              <p className="text-lg text-ink/80 leading-relaxed">
+                Plankton Partners is led by Managing Partner Sena Agbo, with advisors and specialist associates brought together for each mandate.
+              </p>
+              <div className="mt-8">
+                <a href="/team" className="btn-primary no-underline">Meet the team</a>
               </div>
-              <div className="mt-5 text-sm text-ink/60">{p.focus}</div>
-              <p className="mt-4 text-ink/80 leading-relaxed">{p.bio}</p>
-              {p.credentials && (
-                <ul className="mt-4 space-y-1 text-sm text-ink/60">
-                  {p.credentials.map((c) => (
-                    <li key={c}>· {c}</li>
-                  ))}
-                </ul>
-              )}
-            </article>
-          ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="bg-cream border-t border-line mt-16">
-        <div className="container-wide py-16 grid md:grid-cols-3 gap-10">
-          <div>
-            <div className="eyebrow">Firm profile</div>
-            <ul className="mt-4 space-y-2 text-ink/80 text-sm">
-              <li>Management consulting and financial advisory</li>
-              <li>Headquartered in {site.offices[0]}, Ghana</li>
-              <li>Serving organisations of all sizes and persuasions</li>
-            </ul>
-          </div>
-          <div>
-            <div className="eyebrow">What we do best</div>
-            <ul className="mt-4 space-y-2 text-ink/80 text-sm">
-              <li>Corporate Strategy</li>
-              <li>Environment, Social &amp; Governance (ESG)</li>
-              <li>Business Transformation</li>
-              <li>Organisation &amp; Performance</li>
-              <li>M&amp;A Due Diligence</li>
-              <li>Financial Management</li>
-              <li>Risk Management</li>
-              <li>Financial Sector Research</li>
-            </ul>
-          </div>
-          <div>
-            <div className="eyebrow">Contact</div>
-            <ul className="mt-4 space-y-2 text-ink/80 text-sm">
-              <li>
-                <a href={`mailto:${site.email.general}`} className="text-navy hover:text-accent font-medium">
-                  {site.email.general}
-                </a>
-              </li>
-              <li>{site.phone}</li>
-              <li>{site.address.postal}</li>
-              <li>Digital Address: {site.address.digital}</li>
-            </ul>
-          </div>
+      <section className="container-wide py-16 grid md:grid-cols-3 gap-10">
+        <div>
+          <div className="eyebrow">Firm profile</div>
+          <ul className="mt-4 space-y-2 text-ink/80 text-sm">
+            <li>Financial advisory and management consulting</li>
+            <li>Headquartered in Accra, Ghana</li>
+            <li>Serving public and private sector clients across the region</li>
+          </ul>
+        </div>
+        <div>
+          <div className="eyebrow">Practices</div>
+          <ul className="mt-4 space-y-2 text-ink/80 text-sm">
+            <li>Financial Advisory</li>
+            <li>Corporate Strategy</li>
+            <li>Environment, Social &amp; Governance</li>
+            <li>Business Transformation</li>
+            <li>Organisation &amp; Performance</li>
+            <li>Risk Management</li>
+          </ul>
+        </div>
+        <div>
+          <div className="eyebrow">Contact</div>
+          <ul className="mt-4 space-y-2 text-ink/80 text-sm">
+            <li>
+              <a href="mailto:connect@planktonpartners.com" className="text-navy hover:text-accent font-medium">
+                connect@planktonpartners.com
+              </a>
+            </li>
+            <li>024 402 8258</li>
+            <li>P.O. Box CT 8511, Cantonments, Accra, Ghana</li>
+            <li>Digital address: GA-124-6890</li>
+          </ul>
         </div>
       </section>
 
