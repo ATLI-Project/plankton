@@ -1,7 +1,17 @@
 import Link from "next/link";
 import { site } from "@/lib/site";
 
-export default function CTA() {
+type CTAProps = {
+  title?: string;
+  cta?: string;
+  href?: string;
+};
+
+export default function CTA({
+  title = site.cta.text,
+  cta = site.cta.button,
+  href = "/contact",
+}: CTAProps) {
   return (
     <section className="mt-24 bg-navy text-white relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-1 bg-accent" />
@@ -12,10 +22,10 @@ export default function CTA() {
       />
       <div className="container-wide py-20 md:py-28 flex flex-col md:flex-row md:items-end md:justify-between gap-8 relative">
         <h2 className="font-serif text-3xl md:text-5xl max-w-3xl leading-tight text-white">
-          {site.cta.text}
+          {title}
         </h2>
-        <Link href="/contact" className="btn-accent self-start no-underline">
-          {site.cta.button}
+        <Link href={href} className="btn-accent self-start no-underline">
+          {cta}
         </Link>
       </div>
     </section>

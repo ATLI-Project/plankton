@@ -35,7 +35,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
+        <div id="subscribe">
           <div className="eyebrow">Newsletter</div>
           <p className="mt-4 text-sm text-ink/80 max-w-xs leading-relaxed">
             {site.footer.newsletter}
